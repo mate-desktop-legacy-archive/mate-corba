@@ -21,6 +21,7 @@
 static int      corba_wakeup_fds[2];
 #define WAKEUP_POLL  corba_wakeup_fds [0]
 #define WAKEUP_WRITE corba_wakeup_fds [1]
+static GMainContext *giop_main_context = NULL;
 static GSource *giop_main_source = NULL;
 static GIOPThread *giop_main_thread = NULL;
 
@@ -530,19 +531,26 @@ MateCORBA_get_safe_tmp (void)
 }
 
 void
+giop_set_main_context (GMainContext *context)
+{
+	giop_main_context = context;
+}
+
+void
 giop_init (gboolean thread_safe, gboolean blank_wire_data)
 {
 	link_init (thread_safe);
 
 	if (giop_thread_safe ()) {
 		GIOPThread *tdata;
+		if (!giop_main_context)
+			giop_main_context = g_main_context_default();
 
 		/* We need a destructor to clean up if giopthreads are used
 		 * outside of MateCORBA controlled threads */
 		giop_tdata_private = g_private_new ((GDestroyNotify)giop_thread_free);
 
-		giop_main_thread = tdata = giop_thread_new (
-			g_main_context_default ()); /* main thread */
+		giop_main_thread = tdata = giop_thread_new (giop_main_context); /* main thread */
 
 		if (link_pipe (corba_wakeup_fds) < 0) /* cf. g_main_context_init_pipe */
 			g_error ("Can't create CORBA main-thread wakeup pipe");
@@ -556,7 +564,7 @@ giop_init (gboolean thread_safe, gboolean blank_wire_data)
 		fcntl (WAKEUP_WRITE, F_SETFL, O_NONBLOCK);
 #endif
 		giop_main_source = link_source_create_watch (
-			g_main_context_default (), WAKEUP_POLL,
+			giop_main_context, WAKEUP_POLL,
 			NULL, (G_IO_IN | G_IO_PRI),
 			giop_mainloop_handle_input, NULL);
 		
