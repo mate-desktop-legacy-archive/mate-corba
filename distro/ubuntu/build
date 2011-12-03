@@ -2,7 +2,7 @@
 
 # fill it
 pkgname=mate-corba
-pkgver=2011.10.29
+pkgver=2011.12.01
 pkgrel=1
 pkgdesc="Thin and fast CORBA ORB"
 depends=('libc6' 'libglib2.0-0' 'libidl0')
