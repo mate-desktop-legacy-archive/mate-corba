@@ -14,7 +14,10 @@ Lauri Alanko <la@iki.fi>
 Michael Lausch <mla@gams.co.at>
 Sebastian Wilhelmi <wilhelmi@ira.uka.de>
 Kennard White <kennard@berkeley.innomedia.com>
-Frank Rehberger <frehberg@mate-de.org>
+Frank Rehberger <frehberg@gnome-de.org>
 
 (This file is here because automake wants it, not because we wanted to
 leave anyone off the list :)
+
+MATE Authors:
+Perberos <perberos@gmail.com>
