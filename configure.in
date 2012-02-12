@@ -1,10 +1,10 @@
 m4_define([matecorba_major_version],[1])
-m4_define([matecorba_minor_version],[1])
+m4_define([matecorba_minor_version],[2])
 m4_define([matecorba_micro_version],[0])
 m4_define([matecorba_version],[matecorba_major_version.matecorba_minor_version.matecorba_micro_version])
 
 dnl Process this file with autoconf to produce a configure script.
-AC_INIT([MateCORBA2],[matecorba_version],[https://github.com/perberos/mate-desktop-environment],[MateCORBA2])
+AC_INIT([MateCORBA2],[matecorba_version],[https://github.com/mate-desktop/mate-corba],[MateCORBA2])
 
 # Process this file with autoconf to produce a configure script.
 # require autoconf 2.54
