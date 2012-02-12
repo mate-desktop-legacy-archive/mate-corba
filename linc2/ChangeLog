@@ -1129,7 +1129,7 @@
 	excellent report.
 
 	* src/linc-protocols.c
-	(linc_protocol_is_local_ipv46): explicitely
+	(linc_protocol_is_local_ipv46): explicitly
 	cast h_addr_list[n] to a guint8 * to please OSF/1.
 	(in6_addr): break the Mac OS/X brain-damage hack-around,
 	this needs to be specific to Mac only - it was
@@ -1616,7 +1616,7 @@
 
 	* src/linc-protocols.c: define NI_MAXHOST to
 	MAXHOSTNAMELEN if we just can't find it, include
-	sys/param.h explicitely for that, define NI_MAXSERV
+	sys/param.h explicitly for that, define NI_MAXSERV
 	to 64 in case we can't get that either.
 
 2002-02-05  Sebastian Wilhelmi  <wilhelmi@ira.uka.de>

@@ -201,7 +201,7 @@ genuid_init (void)
 	    matecorba_use_genuid_simple)
 		g_error  ("It is impossible to isolate one user from another "
 			  "with only simple cookie generation, you cannot "
-			  "explicitely enable this option and LocalOnly mode "
+			  "explicitly enable this option and LocalOnly mode "
 			  "at the same time");
 
 	else if (!MateCORBA_genuid_init (MateCORBA_genuid_type ())) {

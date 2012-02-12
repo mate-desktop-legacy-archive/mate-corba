@@ -339,7 +339,7 @@ MateCORBA2-2.7.3
 		+ non_existent / try_connection fix (Michael)
 		+ 'broken' emission at idle (Michael, George Lebl)
 		+ DynAnyFactory registration (Michael)
-		+ no longer explicitely "entering a wold of pain"
+		+ no longer explicitly "entering a wold of pain"
 		+ MateCORBA_sequence fixes (Frank Rehberger)
 		+ linc source fix (Padraig O'Briain)
 		+ gthread linkage fix (Michael)
