@@ -1,8 +1,7 @@
-
 #include <config.h>
 #include <ctype.h>
 #include <string.h>
-#include <glib.h>
+#include <stdlib.h>
 
 #include <matecorba/matecorba.h>
 #include <matecorba/orb-core/orb-types.h>
@@ -460,7 +459,7 @@ CORBA_ORB_init (int *argc, char **argv,
 	 * tried to contact them when Evolution was started the next
 	 * time, causing it to hang, too.
 	 */
-	g_atexit (shutdown_orb);
+	atexit(shutdown_orb);
 #endif
 
 	retval->default_giop_version = GIOP_LATEST;
