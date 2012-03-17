@@ -1442,6 +1442,12 @@ MateCORBA_get_giop_recv_limit (void)
 	return giop_recv_get_limit ();
 }
 
+void
+MateCORBA_set_giop_main_context (GMainContext *context)
+{
+	giop_set_main_context (context);
+}
+
 const MateCORBA_option matecorba_supported_options[] = {
 	{ "ORBid",              MATECORBA_OPTION_STRING,  NULL }, /* FIXME: unimplemented */
 	{ "ORBImplRepoIOR",     MATECORBA_OPTION_STRING,  NULL }, /* FIXME: unimplemented */
