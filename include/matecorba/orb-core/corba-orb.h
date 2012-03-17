@@ -34,6 +34,8 @@ gboolean  MateCORBA_proto_use (const char *name);
  */
 glong MateCORBA_get_giop_recv_limit (void);
 
+void MateCORBA_set_giop_main_context (GMainContext *context);
+
 #ifdef MATECORBA2_INTERNAL_API
 
 void      MateCORBA_ORB_forw_bind (CORBA_ORB                   orb,

@@ -39,23 +39,14 @@ extern "C" {
 
 	#endif
 
-	#ifdef G_HAVE_GINT64
+	#define HAVE_CORBA_LONG_LONG
 
-		#define HAVE_CORBA_LONG_LONG
-
-		/*
-		 * According to the spec, these two are optional.
-		 * We support them if we can.
-		 */
-		typedef gint64  CORBA_long_long;
-		typedef guint64 CORBA_unsigned_long_long;
-
-	#else
-		#error ""
-		#error "You don't G_HAVE_GINT64 defined in glib."
-		#error "Please make sure you don't have an old glibconfig.h lying around."
-		#error ""
-	#endif
+	/*
+	 * According to the spec, these two are optional.
+	 * We support them if we can.
+	 */
+	typedef gint64  CORBA_long_long;
+	typedef guint64 CORBA_unsigned_long_long;
 
 #ifdef __cplusplus
 }
