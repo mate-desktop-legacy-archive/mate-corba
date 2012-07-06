@@ -1,3 +1,142 @@
+commit 64c731b3349fe758ed3c1f7fd4861dfaf73b009e
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sun Mar 25 19:09:33 2012 -0400
+
+    Preparing for 1.2.2 release
+
+ configure.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 34a6bc3a152f64582f9bedcfb6670154cc4accbc
+Merge: 2efe230 80bb75a
+Author: Steve Zesch <stevezesch2@gmail.com>
+Date:   Sat Mar 17 10:16:46 2012 -0700
+
+    Merge pull request #2 from benpicco/master
+    
+    sync with upstream
+
+commit 80bb75a2a004e2af42f536d1b22811d50b0d79ba
+Author: Kjartan Maraas <kmaraas@gnome.org>
+Date:   Tue Jan 11 23:48:59 2011 +0100
+
+    Support for custom GMainContext from Ke Wang
+
+ include/matecorba/GIOP/giop.h          |    1 +
+ include/matecorba/orb-core/corba-orb.h |    2 ++
+ src/orb/GIOP/giop.c                    |   14 +++++++++++---
+ src/orb/orb-core/corba-orb.c           |    6 ++++++
+ 4 files changed, 20 insertions(+), 3 deletions(-)
+
+commit 4890d0cf8fdb63a57ff65c60bed1ef933ef2aa8c
+Author: Benjamin Valentin <benpicco@zedat.fu-berlin.de>
+Date:   Sat Mar 17 15:15:34 2012 +0100
+
+    Remove obsolete ifdef
+    GLib requires 64-bit integer support since version 2.0, therefore G_HAVE_GINT64 is always defined.
+
+ include/matecorba/util/basic_types.h |   23 +++++++----------------
+ 1 file changed, 7 insertions(+), 16 deletions(-)
+
+commit 38bd9f87188e201c014065756df64155310bee55
+Author: Javier Jardón <jjardon@gnome.org>
+Date:   Sun Sep 11 01:18:30 2011 +0100
+
+    configure.ac: Use maintainer mode by deafult
+    
+    See
+    https://mail.gnome.org/archives/desktop-devel-list/2011-September/msg00064.html
+
+ configure.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 2efe2306acbf7f8bb240ae102bd898507264db28
+Author: Perberos <perberos@gmail.com>
+Date:   Fri Mar 9 23:47:50 2012 -0300
+
+    g_atexit was deprecated
+
+ src/orb/orb-core/corba-orb.c |    5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+
+commit 9248bbfd21df1da7a165e9d18fb049f99e8de10d
+Author: Perberos <perberos@gmail.com>
+Date:   Fri Mar 9 20:16:51 2012 -0300
+
+    implicit declaration of function 'g_atexit'
+
+ src/orb/orb-core/corba-orb.c |    1 +
+ 1 file changed, 1 insertion(+)
+
+commit 8712d604b219a87ac30b07c64ae35c11c9507b42
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Wed Feb 22 16:19:10 2012 +0100
+
+    update to 1.2.1
+
+ configure.in |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit cb31a811b17d610bd3c0432e3e453c13cae1d0fa
+Merge: c86ab2e c6eacd6
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Fri Feb 17 05:41:06 2012 -0800
+
+    Merge pull request #1 from samtygier/master
+    
+    make autogen.sh exectuable
+
+commit c6eacd643b7ba9b78ac684354efab5dcf48f2106
+Author: Sam Tygier <samtygier@yahoo.co.uk>
+Date:   Fri Feb 17 13:24:51 2012 +0000
+
+    enable executable flag on autogen.sh.
+
+ 0 files changed
+
+commit c86ab2e39d23c87380003ff4c1836e390803d01c
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Feb 12 17:45:10 2012 +0100
+
+    rename mate-autogen.sh to mate-autogen
+
+ autogen.sh |    2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit cf79f36496297d1807be611df0216af910f97aed
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Feb 12 14:07:41 2012 +0100
+
+    fix typos
+
+ NEWS                         |    2 +-
+ linc2/ChangeLog              |    4 ++--
+ src/orb/orb-core/corba-orb.c |    2 +-
+ 3 files changed, 4 insertions(+), 4 deletions(-)
+
+commit 4c10afca47053a5ffa2e3b61a508bf517b4525bb
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Feb 12 13:55:22 2012 +0100
+
+    removed distro/ubuntu folder. use debian-packages git repo instead
+
+ distro/ubuntu/build |   29 -----------------------------
+ 1 file changed, 29 deletions(-)
+
+commit aa69db7435fc8da2f291df3501ec953cbc24099e
+Author: Stefano Karapetsas <stefano@karapetsas.com>
+Date:   Sun Feb 12 13:54:32 2012 +0100
+
+    update info for 1.2.0 release
+
+ AUTHORS      |    6 +-
+ ChangeLog    | 9838 +++-------------------------------------------------------
+ MAINTAINERS  |   18 -
+ README       |   18 +-
+ autogen.sh   |    2 +-
+ configure.in |    4 +-
+ 6 files changed, 495 insertions(+), 9391 deletions(-)
+
 commit c8a10b63d333e7d6ad2713b26aa0f65b4ea0115c
 Author: Perberos <perberos@gmail.com>
 Date:   Tue Jan 24 13:35:23 2012 -0300
@@ -5,7 +144,7 @@ Date:   Tue Jan 24 13:35:23 2012 -0300
     changing pkgbuild source method
 
  distro/archlinux/PKGBUILD |   10 +++++-----
- 1 files changed, 5 insertions(+), 5 deletions(-)
+ 1 file changed, 5 insertions(+), 5 deletions(-)
 
 commit 37fd3f2b914c6c541332f28e13c8c06d7f1fe314
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -61,7 +200,7 @@ Date:   Thu Dec 8 20:34:56 2011 +0100
  test/everything/Makefile.in            |  809 --
  test/inhibit/Makefile.in               |  670 --
  test/poa/Makefile.in                   |  851 --
- 48 files changed, 0 insertions(+), 55385 deletions(-)
+ 48 files changed, 55385 deletions(-)
 
 commit 1f233d9ccf57bbe4d8a15bc8991acfaf24fe524f
 Author: Stefano Karapetsas <stefano@karapetsas.com>
@@ -484,4 +623,4 @@ Date:   Thu Dec 1 22:02:55 2011 -0300
  test/timeout.idl                                   |    3 +
  test/timeout.sh                                    |   31 +
  test/timeout_impl.c                                |  127 +
- 392 files changed, 140399 insertions(+), 0 deletions(-)
+ 392 files changed, 140399 insertions(+)
