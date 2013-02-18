@@ -2,7 +2,7 @@ noinst_PROGRAMS = test-linc
 
 #	-I$(top_srcdir)/include
 #	-I$(top_builddir)/include
-INCLUDES =				\
+AM_CPPFLAGS =				\
 	-I$(top_srcdir)/linc2/include	\
 	-I$(top_builddir)/linc2/include \
 	-I$(top_srcdir)/linc2/src	\
