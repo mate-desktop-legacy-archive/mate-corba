@@ -8,7 +8,7 @@ endif
 
 #	-I$(top_builddir)/include
 #	-I$(top_srcdir)/include
-INCLUDES =                         \
+AM_CPPFLAGS =                         \
 	-I$(top_builddir)/linc2/include  \
 	-I$(top_srcdir)/linc2/include    \
 	$(LINC_CFLAGS)             \
@@ -17,7 +17,7 @@ INCLUDES =                         \
 
 if OS_WIN32
 else
-INCLUDES += -D_GNU_SOURCE
+AM_CPPFLAGS += -D_GNU_SOURCE
 endif
 
 liblinc_la_SOURCES =		\

@@ -2,7 +2,7 @@ noinst_LTLIBRARIES=liborb-core.la
 
 TYPELIB_DIR=$(libdir)/matecorba-2.0
 
-INCLUDES =						\
+AM_CPPFLAGS =						\
 	-I.						\
 	-I$(srcdir)					\
 	-I$(top_builddir)/include			\

@@ -26,7 +26,7 @@ libMateCORBACosNaming_2_la_LDFLAGS =					\
 	$(MATECORBA_NAME_LIBS)						\
 	$(top_builddir)/src/orb/libMateCORBA-2.la
 
-INCLUDES =				\
+AM_CPPFLAGS =				\
 	-I.				\
 	-I$(top_builddir)/include	\
 	-I$(top_srcdir)/include		\
