@@ -17,7 +17,7 @@ AM_CPPFLAGS =                         \
 
 if OS_WIN32
 else
-INCLUDES += -D_GNU_SOURCE
+AM_CPPFLAGS += -D_GNU_SOURCE
 endif
 
 liblinc_la_SOURCES =		\
