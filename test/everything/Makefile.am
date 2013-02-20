@@ -10,7 +10,7 @@ EVERYTHING_IDLOUT =          \
 	$(EVERYTHING_BUILT)  \
 	everything-imodule.c
 
-INCLUDES =                                 \
+AM_CPPFLAGS =                                 \
 	-I$(top_srcdir)/include            \
 	-I$(top_builddir)/include          \
 	-I$(top_builddir)/src              \

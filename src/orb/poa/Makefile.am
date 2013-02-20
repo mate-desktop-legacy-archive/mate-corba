@@ -2,7 +2,7 @@ noinst_LTLIBRARIES=liborb-poa.la
 
 IDL = $(top_builddir)/src/idl-compiler/matecorba-idl-2
 
-INCLUDES =						\
+AM_CPPFLAGS =						\
 	-I$(top_srcdir)/include				\
 	-I$(top_builddir)/include			\
 	-I$(top_builddir)/src/orb/orb-core		\
