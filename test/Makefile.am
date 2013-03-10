@@ -1,6 +1,6 @@
 SUBDIRS = everything inhibit poa
 
-AM_CPPFLAGS =                          \
+INCLUDES =                          \
 	-I$(top_srcdir)/include     \
 	-I$(top_srcdir)/src/orb     \
 	-I$(top_builddir)/include   \

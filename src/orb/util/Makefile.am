@@ -1,6 +1,6 @@
 noinst_LTLIBRARIES=liborb-util.la
 
-AM_CPPFLAGS =						\
+INCLUDES =						\
 	-I$(top_srcdir)/include				\
 	-I$(top_builddir)/include			\
 	-DMATECORBA_SYSTEM_RCFILE=\"$(sysconfdir)/matecorbarc\"	\
