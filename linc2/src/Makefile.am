@@ -12,8 +12,7 @@ INCLUDES =                         \
 	-I$(top_builddir)/linc2/include  \
 	-I$(top_srcdir)/linc2/include    \
 	$(LINC_CFLAGS)             \
-	$(WARN_CFLAGS)             \
-	-DG_DISABLE_DEPRECATED
+	$(WARN_CFLAGS)
 
 if OS_WIN32
 else
