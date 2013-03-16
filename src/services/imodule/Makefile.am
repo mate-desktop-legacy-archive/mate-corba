@@ -2,7 +2,7 @@ NULL =
 
 lib_LTLIBRARIES = libMateCORBA-imodule-2.la
 
-AM_CPPFLAGS =				\
+INCLUDES =				\
         -I$(top_srcdir)/include		\
         -I$(top_builddir)/include	\
 	-DMATECORBA2_INTERNAL_API		\
