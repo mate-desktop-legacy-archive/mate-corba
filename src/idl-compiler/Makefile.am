@@ -2,7 +2,7 @@ bin_PROGRAMS = matecorba-idl-2
 
 matecorba_backends_dir = $(libdir)/matecorba-2.0/idl-backends
 
-INCLUDES =							\
+AM_CPPFLAGS =							\
 	-I$(top_builddir)					\
 	-I$(top_builddir)/include				\
 	-I$(top_srcdir)						\
