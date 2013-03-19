@@ -1,6 +1,6 @@
 m4_define([matecorba_major_version],[1])
 m4_define([matecorba_minor_version],[4])
-m4_define([matecorba_micro_version],[0])
+m4_define([matecorba_micro_version],[1])
 m4_define([matecorba_version],[matecorba_major_version.matecorba_minor_version.matecorba_micro_version])
 
 dnl Process this file with autoconf to produce a configure script.
