@@ -78,7 +78,7 @@ include $(top_srcdir)/Makefile.shared
 BUILT_SOURCES = ${EVERYTHING_BUILT} everything-imodule.c
 CLEANFILES = ${BUILT_SOURCES} iorfile
 
-#TESTS = $(srcdir)/test.sh
+TESTS = test.sh
 
 EXTRA_DIST = $(IDL_FILES) test.sh $(included_src)
 
